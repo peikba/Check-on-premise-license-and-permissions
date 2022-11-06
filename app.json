@@ -9,7 +9,7 @@
   "EULA": "https://ba-consult.dk/download/warrenty.txt",
   "help": "",
   "url": "",
-  "logo": "",
+  "logo": "./images/Logo.png",
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
