@@ -49,18 +49,18 @@ page 50097 "BAC Check License Extensions"
     trigger OnOpenPage()
     begin
         Rec.SetRange("Object ID", 50000, 99999);
-        Rec.SetFilter("Object Type", 'TableExtension|PageExtension|ReportExtension|EnumExtension|PermissionSetExtension|ProfileExtension');
+        Rec.SetFilter("Object Type", 'TableExtension|PageExtension');
     end;
 
     var
         FromAppName: Text;
         FromAppPublisher: Text;
-        FromNavApp: Record "Published Application";
+        FromNavApp: Record "Nav App";
 
     procedure SetObjectTypeFilter(inObjectTypeFilter: Text)
     begin
         if (inObjectTypeFilter = '') then
-            inObjectTypeFilter := 'TableExtension|PageExtension|ReportExtension|EnumExtension|PermissionSetExtension|ProfileExtension';
+            inObjectTypeFilter := 'TableExtension|PageExtension';
         Rec.SetFilter("Object Type", inObjectTypeFilter);
         if Rec.FindFirst() then;
         CurrPage.Update(false);

@@ -159,37 +159,7 @@ page 50095 "BAC Check License"
                         SetObjectFilter();
                     end;
                 }
-                field(EnumFilter; EnumFilter)
-                {
-                    Caption = 'Enums';
-                    Importance = Additional;
 
-                    trigger OnValidate()
-                    begin
-                        SetObjectFilter();
-                    end;
-                }
-                field(PermissionSetFilter; PermissionSetFilter)
-                {
-                    Caption = 'PermissionSets';
-                    Importance = Additional;
-
-                    trigger OnValidate()
-                    begin
-                        SetObjectFilter();
-                    end;
-                }
-                field(ProfileFilter; ProfileFilter)
-                {
-                    Caption = 'Profiles';
-                    Importance = Additional;
-
-                    trigger OnValidate()
-                    begin
-                        SetObjectFilter();
-                    end;
-                }
-                //TODO New object types
                 field(ObjectNoFilter; ObjectNoFilter)
                 {
                     Caption = 'Object No Filter';
@@ -222,43 +192,6 @@ page 50095 "BAC Check License"
                         SetObjectExtFilter();
                     end;
                 }
-                field(ReportExtension; ReportExtFilter)
-                {
-                    Caption = 'Report Extensions';
-
-                    trigger OnValidate()
-                    begin
-                        SetObjectExtFilter();
-                    end;
-                }
-                field(EnumExtFilter; EnumExtFilter)
-                {
-                    Caption = 'Enum Extensions';
-
-                    trigger OnValidate()
-                    begin
-                        SetObjectExtFilter();
-                    end;
-                }
-                field(PermissionExtFilter; PermissionExtFilter)
-                {
-                    Caption = 'Permission Extensions';
-
-                    trigger OnValidate()
-                    begin
-                        SetObjectExtFilter();
-                    end;
-                }
-                field(ProfileExtFilter; ProfileExtFilter)
-                {
-                    Caption = 'Profile Extensions';
-
-                    trigger OnValidate()
-                    begin
-                        SetObjectExtFilter();
-                    end;
-                }
-
                 field(ExtObjectNoFilter; ExtObjectNoFilter)
                 {
                     Caption = 'Object No Filter';
@@ -350,14 +283,6 @@ page 50095 "BAC Check License"
         ShowTenantPermissions: Boolean;
         ShowVersions: Boolean;
         NotIncludedInPermissions: Boolean;
-        ReportExtFilter: Boolean;
-
-        EnumExtFilter: Boolean;
-        PermissionExtFilter: Boolean;
-        ProfileExtFilter: Boolean;
-        EnumFilter: Boolean;
-        PermissionSetFilter: Boolean;
-        ProfileFilter: Boolean;
 
     procedure PopulateVersionList()
     var
@@ -489,12 +414,6 @@ page 50095 "BAC Check License"
             ObjectTypeFilter += '|Codeunit';
         if XMLPortFilter then
             ObjectTypeFilter += '|XMLport';
-        if EnumFilter then
-            ObjectTypeFilter += '|Enum';
-        if PermissionSetFilter then
-            ObjectTypeFilter += '|Permission';
-        if ProfileFilter then
-            ObjectTypeFilter += '|Profile';
 
         ObjectTypeFilter := CopyStr(ObjectTypeFilter, 2);
         CurrPage.LicencePage.PAGE.SetObjectTypeFilter(ObjectTypeFilter);
@@ -510,14 +429,6 @@ page 50095 "BAC Check License"
             ObjectTypeFilter += '|TableExtension';
         if PageExtFilter then
             ObjectTypeFilter += '|PageExtension';
-        if ReportExtFilter then
-            ObjectTypeFilter += '|ReportExtension';
-        if EnumExtFilter then
-            ObjectTypeFilter += '|EnumExtension';
-        if PermissionExtFilter then
-            ObjectTypeFilter += '|PermissionSetExtension';
-        if ProfileExtFilter then
-            ObjectTypeFilter += '|ProfileExtension';
         ObjectTypeFilter := CopyStr(ObjectTypeFilter, 2);
         CurrPage.ObjectExtensions.PAGE.SetObjectTypeFilter(ObjectTypeFilter);
     end;

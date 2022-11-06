@@ -110,7 +110,7 @@ page 50096 "BAC Check License Perm. Sub"
         ObjectName: Text;
         FromAppName: Text;
         FromAppPublisher: Text;
-        FromNavApp: Record "Published Application";
+        FromNavApp: Record "NAV App";
 
     procedure SetExistFilter(SetFilter: Boolean)
     var

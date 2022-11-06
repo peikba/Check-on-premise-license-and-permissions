@@ -36,7 +36,7 @@ page 50098 "BAC Check Tenant Permissions"
 
     trigger OnAfterGetRecord()
     var
-        NavApp: Record "Published Application";
+        NavApp: Record "Nav App";
     begin
         clear(AppName);
         if NavApp.Get(Rec."App ID") then

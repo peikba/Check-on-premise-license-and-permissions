@@ -7,7 +7,7 @@
             "type": "al",
             "environmentType": "OnPrem",
             "server": "http://Localhost",
-            "serverInstance": "BC190W1",
+            "serverInstance": "BC140W1",
             "authentication": "Windows",
             "startupObjectId": 50095,
             "startupObjectType": "Page",
