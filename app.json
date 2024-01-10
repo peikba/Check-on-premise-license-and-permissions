@@ -1,23 +1,23 @@
 {
-  "id": "a06e3607-aac6-4654-a50c-fbab388c3311",
+  "id": "f83e6f20-a28d-4b6c-a402-da5d4efe4be2",
   "name": "Check on-premise license & permissions",
-  "publisher": "Bech-Andersen Consult ApS",
-  "version": "19.0.0.1",
-  "brief": "Check on-premise license & permissions",
-  "description": "Check on-premise license & permissions",
+  "publisher": "Default publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
   "privacyStatement": "",
-  "EULA": "https://ba-consult.dk/download/warrenty.txt",
+  "EULA": "",
   "help": "",
   "url": "",
-  "logo": "./images/Logo.png",
+  "logo": "",
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "19.0.0.0",
+  "application": "21.0.0.0",
   "idRanges": [
     {
-      "from": 50000,
-      "to": 50099
+      "from": 50100,
+      "to": 50149
     }
   ],
   "resourceExposurePolicy": {
@@ -25,9 +25,8 @@
     "allowDownloadingSource": true,
     "includeSourceInSymbolFile": true
   },
-  "runtime": "8.0",
+  "runtime": "12.0",
   "features": [
     "NoImplicitWith"
-  ],
-  "target": "OnPrem"
+  ]
 }

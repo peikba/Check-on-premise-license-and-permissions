@@ -306,7 +306,26 @@ page 50095 "BAC Check License"
             }
         }
     }
+actions
+    {
+        area(Processing)
+        {
+            action("ShowFullLicense")
+            {
+                caption = 'Show Full License';
+                applicationarea = All;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                Image = ShowChart;
+                trigger OnAction()
+                begin
+                    Page.Run(50013, LicenseInfo);
+                end;
 
+            }
+        }
+    }
     trigger OnOpenPage()
     begin
         CurrPage.VersionPage.PAGE.ClearTmpRec;
